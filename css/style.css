@@ -1,0 +1,32 @@
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  }
+  @supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+  }
+
+body {
+    background-color: #222;
+    color: white;
+    margin: 0;
+}
+
+.centered-div {
+    padding: 2rem;
+    position: absolute;
+    top: 64vh;
+    left: 59vw;
+    /* transform: translate(-50%, -50%); */
+    font-size: 2rem;
+}
+
+.centered-div:hover {
+    animation-name: rotation;
+    animation-duration: 4s;
+}
+
+@keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
